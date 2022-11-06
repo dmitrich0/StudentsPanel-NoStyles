@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js"></script>
+    <title>Панель управления студентами</title>
+  </head>
+<body>
+    <main class="main">
+        <h1 class="main__title">Панель управления студентами</h1>
+        <div class="inputs">
+            <input placeholder="Фильтр по имени" id="filter_name" type="text" class="filter-input">
+            <input placeholder="Фильтр по факультету" id="filter_faculty" type="text" class="filter-input">
+            <input placeholder="Год начала обучения" id="filter_start" type="text" class="filter-input">
+            <input placeholder="Год окончания обучения" id="filter_finish" type="text" class="filter-input">
+        </div>
+        <div class="main__container flex">
+            <table id="table" class="main__table table">
+                <caption class="table__caption">Таблица студентов</caption>
+                <tbody id="table-body">
+                    <tr class="table__main-row">
+                        <th class="cell">
+                            <button id="sort-btn-name" class="sort-btn">ФИО</button>
+                        </th>
+                        <th class="cell">
+                            <button id="sort-btn-faculty" class="sort-btn">Факультет</button>
+                        </th>
+                        <th class="cell">
+                            <button id="sort-btn-birth" class="sort-btn">Дата рождения и возраст</button>
+                        </th>
+                        <th class="cell">
+                            <button id="sort-btn-years" class="sort-btn">Годы обучения (курс)</button>
+                        </th>
+                    </tr>
+                 </tbody>
+            </table>
+            <div class="main__form form flex">
+                <input id="name-input" class="form__input" type="text" name="name" placeholder="Имя">
+                <input id="surname-input" class="form__input" type="text" name="surname" placeholder="Фамилия">
+                <input id="patronymic-input" class="form__input" type="text" name="patronymic" placeholder="Отчество">
+                <input id="birth-input" class="form__input" type="date" name="birth-date" placeholder="Дата рождения">
+                <input id="year-input" class="form__input" type="number" name="year" min="2000" max="2022" placeholder="Год начала обучения">
+                <input id="faculty-input" class="form__input" type="text" name="faculty" placeholder="Факультет">
+                <input id="send-btn" type="button" value="Добавить студента">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
